@@ -7,6 +7,7 @@ This project is a polished single-page portfolio website designed to present Nob
 - Sections for hero, about, skills, experience, portfolio, services, stats, testimonials, and contact
 - Typing animation, scroll progress, animated counters, and responsive navigation
 - Static deployment friendly for GitHub Pages, Netlify, or Vercel
+- Updated personal details, contact information, and CV assets
 
 ## Run locally
 Open the project folder and serve the files with a simple static server, for example:
@@ -16,3 +17,7 @@ python -m http.server 3000
 ```
 
 Then open http://localhost:3000
+
+## Contact details
+- Email: nobinmorsalin7@gmail.com
+- WhatsApp: +880 1795-456495
