@@ -211,7 +211,7 @@
           </div>
           <div class="featured-content">
             <p>
-              OfferLutBox.com brings affiliate tracking, smart redirects, offer orchestration, landing page generation, analytics, and network management into a single professional platform.
+              OfferLutBox.com is an affiliate tracking and marketing platform designed to manage offers, automate redirects, and deliver analytics for modern campaigns.
             </p>
             <ul class="feature-list">
               <li>Affiliate tracking and postback logic</li>
@@ -226,7 +226,60 @@
           </div>
         </div>
 
+        <div class="featured-project card zen-featured-project">
+          <div class="featured-media">
+            <a href="https://zenfashions.shop/" target="_blank" rel="noopener noreferrer" class="zen-preview" aria-label="Visit ZenFashions.shop">
+              <div class="zen-browser">
+                <div class="zen-browser-bar">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="zen-screen">
+                  <div class="zen-hero-panel">
+                    <div class="zen-panel-title">ZenFashions.shop</div>
+                    <div class="zen-panel-subtitle">Modern e-commerce • Responsive • Premium UI</div>
+                  </div>
+                  <div class="zen-product-grid">
+                    <div class="zen-product"></div>
+                    <div class="zen-product"></div>
+                    <div class="zen-product"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="featured-content">
+            <p>
+              ZenFashions.shop is a modern, production-ready e-commerce experience focused on product discovery, responsive shopping, premium UI, and fast performance.
+            </p>
+            <ul class="feature-list">
+              <li>Responsive design for seamless mobile and desktop shopping</li>
+              <li>Modern shopping experience with polished product journeys</li>
+              <li>UI/UX-driven interface for strong conversion and clarity</li>
+              <li>Production deployment with performance-focused infrastructure</li>
+            </ul>
+            <div class="actions compact">
+              <a href="https://zenfashions.shop/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Visit ZenFashions.shop</a>
+              <a href="mailto:nobinmorsalin7@gmail.com" class="btn btn-secondary">Request a Similar Build</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading case-study-heading">
+          <p class="eyebrow">Case studies</p>
+          <h2>Selected production work for modern brands and online businesses.</h2>
+        </div>
+
         <div class="project-grid">
+          <article class="card project-card">
+            <h3>OfferLutBox.com</h3>
+            <p>Affiliate tracking and marketing platform with offer orchestration, smart redirects, and analytics.</p>
+            <span>Affiliate Platform · Laravel · Analytics</span>
+          </article>
+          <article class="card project-card zen-card">
+            <h3>ZenFashions.shop</h3>
+            <p>Modern e-commerce platform with premium shopping experience, responsive design, and production deployment.</p>
+            <span>Live Project · E-commerce · UI/UX</span>
+          </article>
           <article class="card project-card">
             <h3>School Management System</h3>
             <p>Student records, attendance, reporting, and admin panels tailored for educational organizations.</p>
@@ -314,11 +367,29 @@
             <a href="mailto:nobinmorsalin7@gmail.com">nobinmorsalin7@gmail.com</a>
             <a href="https://wa.me/8801795456495">WhatsApp: +880 1795-456495</a>
           </div>
-          <form class="card form-card" action="mailto:nobinmorsalin7@gmail.com" method="post" enctype="text/plain">
-            <input type="text" placeholder="Your name" name="name" />
-            <input type="email" placeholder="Your email" name="email" />
-            <textarea rows="5" placeholder="Describe your project" name="message"></textarea>
-            <button type="submit">Send message</button>
+          <form class="card form-card" id="contactForm">
+            <div class="form-group">
+              <input type="text" placeholder="Your name" id="name" name="name" required />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your email" id="email" name="email" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <textarea rows="5" placeholder="Describe your project" id="message" name="message" required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn-submit" id="submitBtn">
+              <span class="btn-text">Send message</span>
+              <span class="btn-spinner hidden"></span>
+            </button>
+            <div class="form-message success-message hidden" id="successMessage">
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+            <div class="form-message error-message hidden" id="errorMessage">
+              ✗ Failed to send. Please try emailing directly: nobinmorsalin7@gmail.com
+            </div>
           </form>
         </div>
       </section>
