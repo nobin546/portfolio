@@ -2,6 +2,7 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const progressBar = document.querySelector('.scroll-progress');
 const year = document.getElementById('year');
+const profileCard = document.querySelector('.profile-card');
 
 if (year) year.textContent = new Date().getFullYear();
 
@@ -77,3 +78,14 @@ window.addEventListener('scroll', () => {
   const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
   progressBar.style.transform = `scaleX(${progress})`;
 });
+
+if (profileCard) {
+  window.addEventListener('pointermove', (event) => {
+    const x = (event.clientX / window.innerWidth - 0.5) * 10;
+    const y = (event.clientY / window.innerHeight - 0.5) * 10;
+    profileCard.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+  });
+  window.addEventListener('pointerleave', () => {
+    profileCard.style.transform = '';
+  });
+}

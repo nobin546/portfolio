@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    <w:p><w:r><w:t>ATS Resume</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Name: Nobin Morsalin</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Nationality: Bangladeshi</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Career Goal: AI-Assisted Full Stack Web Developer</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Skills: HTML, CSS, JavaScript, PHP, Laravel, MySQL, AJAX, Tailwind CSS, Flutter (Basic), Git, GitHub, AI-assisted Software Development, Prompt Engineering, UI/UX Implementation, Responsive Web Design</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Projects: OfferLutBox, Affiliate Platform, E-commerce Systems, School Management System, College Management System, Madrasah Management System, Admin Dashboards, Landing Page Development, SEO Optimization, AI Workflow Development</w:t></w:r></w:p>
+    <w:p><w:r><w:t>Languages: Bangla, English</w:t></w:r></w:p>
+    <w:sectPr/></w:body>
+</w:document>
