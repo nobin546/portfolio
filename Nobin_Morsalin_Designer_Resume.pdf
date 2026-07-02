@@ -4,419 +4,115 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+<< /Type /Pages /Kids [3 0 R 5 0 R ] /Count 2 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 9 0 R >> >> /Contents 6 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 9 0 R >> >> /Contents 7 0 R >>
-endobj
-5 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 9 0 R >> >> /Contents 8 0 R >>
-endobj
-6 0 obj
-<< /Length 3497 >>
+<< /Length 2228 >>
 stream
 BT /F1 10 Tf 50 800 Td
-(NOBIN MORSALIN - DESIGNER RESUME PAGE 1) Tj
+(Nobin Morsalin ? Designer Resume) Tj
 0 -14 Td
-(======================================================================) Tj
+(SECTION:Professional Summary) Tj
 0 -14 Td
+(Creative and product-focused full stack developer with a strong eye for premium UI, responsive experiences, and reliable engineering.) Tj
 0 -14 Td
+(Builds polished digital products using Laravel, PHP, JavaScript, Next.js, HTML, CSS, and Tailwind CSS with a strong focus on usability, accessibility, and performance.) Tj
 0 -14 Td
-(NOBIN MORSALIN) Tj
+(Works with AI-assisted development to accelerate implementation while keeping quality high for real-world deployment.) Tj
 0 -14 Td
-(--------------) Tj
 0 -14 Td
-(Full Stack Developer & Premium UI/UX Designer) Tj
+(SECTION:Education & Background) Tj
 0 -14 Td
-(Building beautiful, performant, and accessible digital experiences) Tj
+(Born: 30-03-2008) Tj
 0 -14 Td
+(SSC GPA: 3.78) Tj
 0 -14 Td
-(Email: nobinmorsalin7@gmail.com | WhatsApp: +8801795456495) Tj
+(Currently studying at Shariatpur Government College \(HSC Running\)) Tj
 0 -14 Td
-(Location: Damudya, Shariatpur, Bangladesh | Portfolio: offerlutbox.com) Tj
+(Experience is rooted in independent projects, freelance delivery, and production work rather than formal company employment history.) Tj
 0 -14 Td
 0 -14 Td
+(SECTION:Core Technical Skills) Tj
 0 -14 Td
-(PROFESSIONAL SUMMARY) Tj
+(Frontend: HTML, CSS, JavaScript, Tailwind CSS, Next.js) Tj
 0 -14 Td
-(--------------------) Tj
+(Backend: Laravel, PHP, REST API, API Integration, MySQL) Tj
 0 -14 Td
-(Creative Full Stack Developer and UI/UX Designer with 3+ years building premium digital) Tj
+(Growth & Marketing: Facebook Pixel, Meta CAPI, Events API, Conversion API, SEO) Tj
 0 -14 Td
-(products that combine stunning visuals with robust engineering. Specialized in design systems,) Tj
+(Infrastructure: VPS Management, Linux, Docker, Git, GitHub, Payment Gateway Integration) Tj
 0 -14 Td
-(responsive interfaces, and high-performance applications using React, Next.js, Laravel, and) Tj
 0 -14 Td
-(Tailwind CSS. Fluent in design tools \(Figma\) and modern web development. Passionate about) Tj
+(SECTION:Featured Projects) Tj
 0 -14 Td
-(accessibility, performance, and user-centered design. Expert in AI-assisted development.) Tj
+(OfferLutBox.com ? affiliate and offer management platform with analytics, smart redirects, and production deployment.) Tj
 0 -14 Td
+(ZenFashions.shop ? modern e-commerce experience focused on responsive UI, product journeys, and fast performance.) Tj
 0 -14 Td
+(School & College Management Systems ? admin dashboards, role-based workflows, records, and automation.) Tj
 0 -14 Td
-(CAREER OBJECTIVE) Tj
+(Landing Pages and Business Automation Systems ? conversion-focused websites and operational tools.) Tj
 0 -14 Td
-(----------------) Tj
 0 -14 Td
-(Seeking Creative Developer or Senior UI/UX role to lead design-driven product development,) Tj
+(SECTION:Latest Work) Tj
 0 -14 Td
-(build scalable design systems, mentor teams on accessibility, and create inclusive experiences.) Tj
+(Meta Tracking + Facebook Pixel + Conversions API + Events API) Tj
 0 -14 Td
-(Committed to building beautiful interfaces that are both functional and high-performing.) Tj
+(Payment Gateway Integration using SSLCommerz, Stripe, and PayPal) Tj
 0 -14 Td
+(Production deployment, performance optimization, and SEO implementation) Tj
 0 -14 Td
-0 -14 Td
-(TECHNICAL SKILLS - FRONTEND) Tj
-0 -14 Td
-(---------------------------) Tj
-0 -14 Td
-(HTML5: Semantic markup, accessibility, progressive enhancement, proper structure) Tj
-0 -14 Td
-0 -14 Td
-(CSS3: Flexbox, CSS Grid, custom properties, animations, transitions, responsive units) Tj
-0 -14 Td
-0 -14 Td
-(JavaScript: ES6+, DOM manipulation, event handling, async/await, interactive components) Tj
-0 -14 Td
-0 -14 Td
-(React: Component architecture, hooks, state management, performance optimization) Tj
-0 -14 Td
-0 -14 Td
-(Next.js: Server-side rendering, static generation, image optimization, API routes) Tj
-0 -14 Td
-0 -14 Td
-(Tailwind CSS: Utility-first workflow, component composition, custom theming, dark mode) Tj
-0 -14 Td
-0 -14 Td
-(AJAX & REST APIs: JSON consumption, async data loading, error handling, WebSockets) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(TECHNICAL SKILLS - BACKEND & INFRASTRUCTURE) Tj
-0 -14 Td
-(-------------------------------------------) Tj
-0 -14 Td
-(PHP: Object-oriented programming, design patterns, best practices) Tj
-0 -14 Td
-0 -14 Td
-(Laravel: MVC architecture, Eloquent ORM, migrations, authentication, routing, middleware) Tj
-0 -14 Td
-0 -14 Td
-(Node.js & Express: RESTful API development, middleware, error handling, request routing) Tj
-0 -14 Td
-0 -14 Td
-(MySQL: Database design, optimization, indexing, query tuning, migrations, relationships) Tj
-0 -14 Td
-0 -14 Td
-(PostgreSQL: Advanced queries, JSON support, relationships, performance optimization) Tj
-0 -14 Td
-0 -14 Td
-(Redis: Caching, queue systems, session storage, real-time data handling, pub/sub) Tj
-0 -14 Td
-0 -14 Td
-(Docker: Containerization, multi-container apps, production deployments, scaling) Tj
-0 -14 Td
-0 -14 Td
-(Linux & VPS: Server management, Nginx, Apache, SSL certificates, deployment automation) Tj
-0 -14 Td
-0 -14 Td
-(Git & GitHub: Version control, branching, pull requests, collaborative workflows) Tj
-0 -14 Td
+(AI-assisted development for rapid delivery across new stacks and frameworks) Tj
 0 -14 Td
 0 -14 Td
 ET
-
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 321 >>
+stream
+BT /F1 10 Tf 50 800 Td
+(Nobin Morsalin ? Designer Resume) Tj
+0 -14 Td
+(SECTION:Contact) Tj
+0 -14 Td
+(Email: nobinmorsalin7@gmail.com) Tj
+0 -14 Td
+(WhatsApp: +880 1795-456495) Tj
+0 -14 Td
+(Portfolio: offerlutbox.com) Tj
+0 -14 Td
+(Experience Certificate / project documentation available on request) Tj
+0 -14 Td
+0 -14 Td
+ET
 endstream
 endobj
 7 0 obj
-<< /Length 4025 >>
-stream
-BT /F1 10 Tf 50 800 Td
-(NOBIN MORSALIN - DESIGNER RESUME PAGE 2) Tj
-0 -14 Td
-(======================================================================) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(DESIGN EXPERTISE) Tj
-0 -14 Td
-(----------------) Tj
-0 -14 Td
-(Visual Design: Color theory, typography, spacing systems, icon design, brand systems) Tj
-0 -14 Td
-0 -14 Td
-(UI Components: Buttons, forms, navigation, modals, cards, data tables, complex layouts) Tj
-0 -14 Td
-0 -14 Td
-(Interaction Design: Micro-interactions, transitions, animations, feedback, hover states) Tj
-0 -14 Td
-0 -14 Td
-(UX Principles: User research, wireframing, prototyping, usability testing, accessibility) Tj
-0 -14 Td
-0 -14 Td
-(Responsive Design: Mobile-first approach, adaptive layouts, breakpoint strategy) Tj
-0 -14 Td
-0 -14 Td
-(Design Systems: Component libraries, design tokens, documentation, consistency at scale) Tj
-0 -14 Td
-0 -14 Td
-(Tools: Figma \(expert\), Adobe XD, CSS animations, prototyping, handoff documentation) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(SPECIALIZED COMPETENCIES) Tj
-0 -14 Td
-(------------------------) Tj
-0 -14 Td
-(SEO & Technical SEO: Meta tags, structured data, Core Web Vitals, performance metrics) Tj
-0 -14 Td
-0 -14 Td
-(Performance Optimization: Code splitting, lazy loading, critical CSS, image optimization) Tj
-0 -14 Td
-0 -14 Td
-(Responsive Web Design: Mobile-first, flexible grids, breakpoint strategy, touch-friendly) Tj
-0 -14 Td
-0 -14 Td
-(UI/UX Understanding: User psychology, interaction patterns, accessibility \(WCAG 2.1 AA\)) Tj
-0 -14 Td
-0 -14 Td
-(AI-Assisted Development: GitHub Copilot, ChatGPT, Claude for code generation, workflows) Tj
-0 -14 Td
-0 -14 Td
-(Flutter \(Basic\): Mobile app development, widget architecture, state management) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(FEATURED PROJECTS - OfferLutBox.com) Tj
-0 -14 Td
-(-----------------------------------) Tj
-0 -14 Td
-(Complete Product Design + Full Stack Development) Tj
-0 -14 Td
-0 -14 Td
-(Description: Premium SaaS affiliate platform with design system and technical foundation.) Tj
-0 -14 Td
-0 -14 Td
-(DESIGN WORK:) Tj
-0 -14 Td
-(  - Designed 50+ reusable UI components in comprehensive design system) Tj
-0 -14 Td
-(  - Intuitive dashboard UI for affiliate marketers with real-time analytics) Tj
-0 -14 Td
-(  - Responsive layouts: desktop, tablet, mobile with touch optimization) Tj
-0 -14 Td
-(  - Micro-interactions and smooth animations throughout user experience) Tj
-0 -14 Td
-(  - WCAG 2.1 AA accessibility compliance, keyboard navigation, screen reader support) Tj
-0 -14 Td
-(  - Performance optimizations: critical CSS, image optimization, lazy loading) Tj
-0 -14 Td
-0 -14 Td
-(TECHNICAL IMPLEMENTATION:) Tj
-0 -14 Td
-(  - Backend: Laravel 10 with 50+ RESTful API endpoints for offer management) Tj
-0 -14 Td
-(  - Frontend: React + Next.js dashboard with real-time data updates) Tj
-0 -14 Td
-(  - Database: PostgreSQL with optimized schemas for tracking and analytics) Tj
-0 -14 Td
-(  - Caching: Redis for high-volume conversion data and queue management) Tj
-0 -14 Td
-(  - Deployment: Docker containers on Linux VPS with Nginx and SSL) Tj
-0 -14 Td
-0 -14 Td
-(Results: 99.5% uptime, 94 Lighthouse score, 100K+ daily conversions, 150+ users) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(FEATURED PROJECTS - E-Commerce & School Systems) Tj
-0 -14 Td
-(-----------------------------------------------) Tj
-0 -14 Td
-(Multi-Project Experience) Tj
-0 -14 Td
-0 -14 Td
-(E-Commerce Platform: Multi-vendor marketplace with design system, product UI, admin) Tj
-0 -14 Td
-(  dashboards, payment integration \(Stripe/SSL Commerz/bKash\), inventory, analytics.) Tj
-0 -14 Td
-0 -14 Td
-(School Management System: Complete digital transformation with role-based dashboards) Tj
-0 -14 Td
-(  \(admin/teacher/student/parent\), attendance, exams, fees, reports. Deployed 5+ schools.) Tj
-0 -14 Td
-0 -14 Td
-(College Management System: Online admission, course registration, fee tracking, exams,) Tj
-0 -14 Td
-(  communication system, transcript generation. Built with Laravel, PostgreSQL, Vue.js.) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-ET
-
-endstream
-endobj
-8 0 obj
-<< /Length 4013 >>
-stream
-BT /F1 10 Tf 50 800 Td
-(NOBIN MORSALIN - DESIGNER RESUME PAGE 3) Tj
-0 -14 Td
-(======================================================================) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(DESIGN SYSTEM COMPONENTS) Tj
-0 -14 Td
-(------------------------) Tj
-0 -14 Td
-(Comprehensive Component Library \(50+ components\) for OfferLutBox.com) Tj
-0 -14 Td
-0 -14 Td
-(FOUNDATIONAL ELEMENTS:) Tj
-0 -14 Td
-(  Buttons \(primary/secondary/ghost states\), Form controls \(inputs/selects/toggles\)) Tj
-0 -14 Td
-(  Cards \(standard/expandable with hover effects\), Navigation \(sidebar/breadcrumbs/tabs\)) Tj
-0 -14 Td
-0 -14 Td
-(DATA DISPLAY:) Tj
-0 -14 Td
-(  Tables \(sortable/filterable\), Charts \(line/bar/pie\), Metrics \(KPI cards/trends\)) Tj
-0 -14 Td
-(  Alerts \(info/success/warning/error\), Progress indicators, Status badges) Tj
-0 -14 Td
-0 -14 Td
-(INTERACTIONS:) Tj
-0 -14 Td
-(  Modals with focus management, Tooltips with smart positioning) Tj
-0 -14 Td
-(  Dropdowns with keyboard nav, Loading states with skeleton screens) Tj
-0 -14 Td
-(  Empty states with illustrations, Toast notifications with auto-dismiss) Tj
-0 -14 Td
-0 -14 Td
-(ACCESSIBILITY:) Tj
-0 -14 Td
-(  Keyboard navigation, ARIA labels, WCAG AA color contrast, Focus indicators) Tj
-0 -14 Td
-(  Screen reader optimization, Semantic HTML, Proper heading hierarchy) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(EDUCATION & PROFESSIONAL DEVELOPMENT) Tj
-0 -14 Td
-(------------------------------------) Tj
-0 -14 Td
-(Current: Shariatpur Government College, Bangladesh) Tj
-0 -14 Td
-(  Self-directed learning in modern web design and development) Tj
-0 -14 Td
-0 -14 Td
-(Secondary: SSC \(GPA: 3.78\) - Shariatpur Government School) Tj
-0 -14 Td
-0 -14 Td
-(Professional Training & Certifications:) Tj
-0 -14 Td
-(  - Figma Advanced: Design systems, prototyping, collaboration, handoff workflows) Tj
-0 -14 Td
-(  - Web Design Fundamentals: UX principles, accessibility, responsive design patterns) Tj
-0 -14 Td
-(  - CSS Mastery: Animations, transitions, modern layout, performance techniques) Tj
-0 -14 Td
-(  - JavaScript Advanced: DOM, ES6+, async, event handling, interactive components) Tj
-0 -14 Td
-(  - React & Next.js: Components, hooks, SSR, static generation, performance) Tj
-0 -14 Td
-(  - Laravel Backend: MVC, database design, API development, authentication) Tj
-0 -14 Td
-(  - Accessibility: WCAG 2.1, ARIA, inclusive design, assistive technology) Tj
-0 -14 Td
-0 -14 Td
-(Self-Taught Expertise:) Tj
-0 -14 Td
-(  UI/UX design psychology, performance optimization, Docker deployment,) Tj
-0 -14 Td
-(  Technical SEO, AI-assisted development workflows, design systems at scale) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(PERSONAL INFORMATION) Tj
-0 -14 Td
-(--------------------) Tj
-0 -14 Td
-(Full Name: Nobin Morsalin | Gender: Male | Nationality: Bangladeshi) Tj
-0 -14 Td
-0 -14 Td
-(Father's Name: Nasir Sikder) Tj
-0 -14 Td
-(Mother's Name: Ferdousi Begum) Tj
-0 -14 Td
-0 -14 Td
-(Permanent Address: Purbakandi, Damudya, Shariatpur, Bangladesh) Tj
-0 -14 Td
-(Present Address: Same as Permanent Address) Tj
-0 -14 Td
-0 -14 Td
-(CONTACT:) Tj
-0 -14 Td
-(  Email: nobinmorsalin7@gmail.com) Tj
-0 -14 Td
-(  WhatsApp: +8801795456495) Tj
-0 -14 Td
-(  Portfolio & Live Projects: offerlutbox.com) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-(ADDITIONAL COMPETENCIES) Tj
-0 -14 Td
-(-----------------------) Tj
-0 -14 Td
-(Problem-Solving: Strong analytical and debugging skills, creative solutions) Tj
-0 -14 Td
-0 -14 Td
-(Communication: Technical writing, client presentations, team collaboration) Tj
-0 -14 Td
-0 -14 Td
-(Teamwork: Collaborative projects, peer code review, mentoring, knowledge sharing) Tj
-0 -14 Td
-0 -14 Td
-(Time Management: On-time delivery, agile methodology, sprint planning, priorities) Tj
-0 -14 Td
-0 -14 Td
-(Adaptability: Quick learner for new technologies, frameworks, design tools) Tj
-0 -14 Td
-0 -14 Td
-(AI Workflows: GitHub Copilot, ChatGPT, Claude for productivity + quality maintenance) Tj
-0 -14 Td
-0 -14 Td
-(Languages: Bengali \(Native/Fluent\), English \(Professional\), Hindi \(Basic\)) Tj
-0 -14 Td
-0 -14 Td
-0 -14 Td
-ET
-
-endstream
-endobj
-9 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 xref
-0 10
+0 9
 0000000000 65535 f 
 0000000015 00000 n 
-0000000015 00000 n 
 0000000064 00000 n 
-0000000133 00000 n 
-0000000259 00000 n 
-0000000385 00000 n 
-0000000511 00000 n 
-0000004060 00000 n 
-0000008137 00000 n 
+0000000128 00000 n 
+0000000254 00000 n 
+0000002534 00000 n 
+0000002604 00000 n 
+0000002730 00000 n 
+0000003102 00000 n 
 trailer
-<< /Size 10 /Root 1 0 R >>
+<< /Size 9 /Root 1 0 R >>
 startxref
-12270
+3172
 %%EOF

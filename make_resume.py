@@ -1,4 +1,5 @@
 from pathlib import Path
+from textwrap import wrap
 
 PDF_TEMPLATE = b"""%PDF-1.4
 %\xe2\xe3\xcf\xd3
@@ -7,48 +8,61 @@ PDF_TEMPLATE = b"""%PDF-1.4
 
 def pdf_escape(text: str) -> bytes:
     return (
-        text
-        .replace("\\", "\\\\")
+        text.replace("\\", "\\\\")
         .replace("(", "\\(")
         .replace(")", "\\)")
         .encode("latin1", errors="replace")
     )
 
 
+def build_page_lines(lines, title):
+    wrapped = [title, ""]
+    for line in lines:
+        if line.startswith("SECTION:" ):
+            wrapped.append(line.split(":", 1)[1].upper())
+            continue
+        if line.startswith("- "):
+            wrapped.append(line)
+            continue
+        wrapped.extend(wrap(line, 95))
+    return wrapped
+
+
 def build_page(content_lines):
-    stream_lines = [b"BT /F1 12 Tf 50 780 Td"]
+    stream_lines = [b"BT /F1 10 Tf 50 800 Td"]
     for line in content_lines:
+        if not line.strip():
+            stream_lines.append(b"0 -14 Td")
+            continue
         escaped = pdf_escape(line)
         stream_lines.append(b"(" + escaped + b") Tj")
-        stream_lines.append(b"T*")
+        stream_lines.append(b"0 -14 Td")
     stream_lines.append(b"ET")
-    stream = b"\n".join(stream_lines)
-    return stream
+    return b"\n".join(stream_lines)
 
 
-def build_pdf(title, sections):
-    content_lines = [title, ""]
-    for heading, lines in sections:
-        content_lines.append(heading)
-        for line in lines:
-            content_lines.append("  " + line)
-        content_lines.append("")
-    stream = build_page(content_lines)
-
+def build_pdf(title, pages):
     objects = []
     objects.append(b"1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n")
-    objects.append(b"2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n")
-    objects.append(
-        b"3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] "
-        b"/Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>\nendobj\n"
-    )
-    objects.append(
-        b"4 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n"
-    )
-    objects.append(
-        b"5 0 obj\n<< /Length %d >>\nstream\n%s\nendstream\nendobj\n"
-        % (len(stream), stream)
-    )
+    objects.append(b"2 0 obj\n<< /Type /Pages /Kids [")
+
+    page_objs = []
+    for i, page_lines in enumerate(pages):
+        page_obj_num = 3 + i * 2
+        content_obj_num = page_obj_num + 1
+        page_objs.append(f"{page_obj_num} 0 R")
+        stream = build_page(page_lines)
+        objects.append(
+            f"{page_obj_num} 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 {page_obj_num + 2} 0 R >> >> /Contents {content_obj_num} 0 R >>\nendobj\n".encode()
+        )
+        objects.append(
+            f"{content_obj_num} 0 obj\n<< /Length {len(stream)} >>\nstream\n".encode() + stream + b"\nendstream\nendobj\n"
+        )
+        objects.append(
+            f"{page_obj_num + 2} 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n".encode()
+        )
+
+    objects[1] = (b"2 0 obj\n<< /Type /Pages /Kids [" + " ".join(page_objs).encode() + f" ] /Count {len(pages)} >>\nendobj\n".encode())
 
     output = bytearray(PDF_TEMPLATE)
     xref_positions = []
@@ -67,77 +81,103 @@ def build_pdf(title, sections):
     return bytes(output)
 
 
+def build_resume_pages(title, sections):
+    pages = []
+    current = []
+    current_lines = 0
+    for section_title, lines in sections:
+        if current_lines + len(lines) + 2 > 34 and current:
+            pages.append([title] + current)
+            current = []
+            current_lines = 0
+        current.append(section_title)
+        current.extend(lines)
+        current.append("")
+        current_lines += len(lines) + 2
+    if current:
+        pages.append([title] + current)
+    return pages
+
+
 def main():
     ats_sections = [
-        ("Professional Summary", [
-            "AI-assisted full stack developer with a strong focus on production-ready",
-            "web platforms, modern SaaS architecture, and scalable Laravel/Next.js systems.",
-            "Experienced in analytics, affiliate offers, admin dashboards, and VPS deployment."
+        ("SECTION:Professional Summary", [
+            "AI-assisted full stack developer focused on production-ready web platforms, modern SaaS architecture, and scalable Laravel/Next.js systems.",
+            "I quickly understand new frameworks using AI-assisted development while maintaining production quality, maintainability, and performance.",
+            "Experience includes real client work, admin dashboards, school and college management systems, e-commerce systems, SEO-focused landing pages, and live deployment on VPS and Docker."
         ]),
-        ("Core Skills", [
-            "Laravel, PHP, Node.js, Next.js, React",
-            "MySQL, PostgreSQL, Redis, Elasticsearch",
-            "Docker, Nginx, Linux, VPS, CI/CD, GitHub Actions",
-            "REST APIs, GraphQL, data pipelines, secure authentication"
+        ("SECTION:Education & Background", [
+            "Born: 30-03-2008",
+            "SSC GPA: 3.78",
+            "Currently studying at Shariatpur Government College (HSC Running)",
+            "Profile is built around self-directed learning, freelance delivery, and real production projects rather than formal company employment history."
         ]),
-        ("Selected Achievements", [
-            "Delivered OfferLutBox.com: affiliate tracking, smart redirects, analytics.",
-            "Built school and college management systems with admin dashboards.",
-            "Implemented 24/7 production deployments with Docker and VPS orchestration.",
-            "Optimized application performance for multi-region traffic and SEO."
+        ("SECTION:Core Technical Skills", [
+            "Laravel, PHP, JavaScript, Next.js, HTML, CSS, Tailwind CSS",
+            "MySQL, REST API, API Integration, Payment Gateway Integration, SSLCommerz, Stripe, PayPal",
+            "Facebook Pixel, Meta CAPI, Events API, Conversion API",
+            "VPS Management, Linux, Docker, Git, GitHub, SEO, Admin Dashboard Development"
         ]),
-        ("Professional Experience", [
-            "Senior Full Stack Developer — freelance and product-focused clients.",
-            "Led end-to-end development from concept to live production deployment.",
-            "Integrated AI workflows for feature planning, code review and automation."
+        ("SECTION:Professional Experience", [
+            "Freelance Full Stack Web Developer — independent client work and product builds.",
+            "AI Assisted Software Developer — using AI-assisted workflows for faster implementation while verifying code quality and deployment readiness.",
+            "Independent Client Projects — school and college management systems, e-commerce development, landing pages, and business automation systems.",
+            "Real Client Work — live project delivery, API integration, payment setup, analytics tagging, and production deployment."
         ]),
-        ("Education & Certifications", [
-            "BSc in Computer Science (ongoing / self-taught modernization)",
-            "Certified Laravel Developer / modern web and cloud delivery practices",
-            "Professional training in UX, performance, and deployment security"
+        ("SECTION:Latest Work", [
+            "Meta Tracking + Facebook Pixel + Conversions API + Events API",
+            "Payment Gateway Integration and API Integration",
+            "Production Deployment, Performance Optimization, and SEO improvements",
+            "OfferLutBox.com and ZenFashions.shop as featured portfolio projects"
         ]),
-        ("Contact", [
+        ("SECTION:Contact", [
             "Email: nobinmorsalin7@gmail.com",
             "WhatsApp: +880 1795-456495",
-            "Portfolio: offerlutbox.com"
-        ]),
+            "Portfolio: offerlutbox.com",
+            "Experience Certificate / project documentation available on request"
+        ])
     ]
 
     designer_sections = [
-        ("Designer CV Overview", [
-            "Creative and functional front-end developer focused on premium product UX.",
-            "Designs interfaces for SaaS, landing pages, dashboards, and business systems.",
-            "Skilled at translating brand strategy into polished digital experiences."
+        ("SECTION:Professional Summary", [
+            "Creative and product-focused full stack developer with a strong eye for premium UI, responsive experiences, and reliable engineering.",
+            "Builds polished digital products using Laravel, PHP, JavaScript, Next.js, HTML, CSS, and Tailwind CSS with a strong focus on usability, accessibility, and performance.",
+            "Works with AI-assisted development to accelerate implementation while keeping quality high for real-world deployment."
         ]),
-        ("Design Systems", [
-            "Component-driven UI libraries, responsive layouts, and interaction patterns.",
-            "Visual consistency across desktop, mobile, and tablet experiences.",
-            "Modern typography, spacing, and color systems aligned with brand identity."
+        ("SECTION:Education & Background", [
+            "Born: 30-03-2008",
+            "SSC GPA: 3.78",
+            "Currently studying at Shariatpur Government College (HSC Running)",
+            "Experience is rooted in independent projects, freelance delivery, and production work rather than formal company employment history."
         ]),
-        ("Project Highlights", [
-            "OfferLutBox.com design system for conversion, analytics, and offer flows.",
-            "Landing page and product UI for e-commerce, education, and business apps.",
-            "Dashboard UX with metrics, workflows, and admin control panels."
+        ("SECTION:Core Technical Skills", [
+            "Frontend: HTML, CSS, JavaScript, Tailwind CSS, Next.js",
+            "Backend: Laravel, PHP, REST API, API Integration, MySQL",
+            "Growth & Marketing: Facebook Pixel, Meta CAPI, Events API, Conversion API, SEO",
+            "Infrastructure: VPS Management, Linux, Docker, Git, GitHub, Payment Gateway Integration"
         ]),
-        ("Technical Design Skills", [
-            "Figma, CSS3, Tailwind CSS, modern JavaScript, responsive components",
-            "Animations, micro-interactions, and accessible web experiences",
-            "Cross-browser compatibility, performance-aware styling, SEO-friendly markup"
+        ("SECTION:Featured Projects", [
+            "OfferLutBox.com — affiliate and offer management platform with analytics, smart redirects, and production deployment.",
+            "ZenFashions.shop — modern e-commerce experience focused on responsive UI, product journeys, and fast performance.",
+            "School & College Management Systems — admin dashboards, role-based workflows, records, and automation.",
+            "Landing Pages and Business Automation Systems — conversion-focused websites and operational tools."
         ]),
-        ("Career Impact", [
-            "Collaborated closely with founders and product teams to launch business tools.",
-            "Delivered visual systems that improved engagement, clarity, and conversions.",
-            "Balanced polished design with practical buildability and maintainability."
+        ("SECTION:Latest Work", [
+            "Meta Tracking + Facebook Pixel + Conversions API + Events API",
+            "Payment Gateway Integration using SSLCommerz, Stripe, and PayPal",
+            "Production deployment, performance optimization, and SEO implementation",
+            "AI-assisted development for rapid delivery across new stacks and frameworks"
         ]),
-        ("Contact", [
+        ("SECTION:Contact", [
             "Email: nobinmorsalin7@gmail.com",
             "WhatsApp: +880 1795-456495",
-            "Web: offerlutbox.com"
-        ]),
+            "Portfolio: offerlutbox.com",
+            "Experience Certificate / project documentation available on request"
+        ])
     ]
 
-    Path("Nobin_Morsalin_ATS_Resume.pdf").write_bytes(build_pdf("Nobin Morsalin — ATS Resume", ats_sections))
-    Path("Nobin_Morsalin_Designer_Resume.pdf").write_bytes(build_pdf("Nobin Morsalin — Designer Resume", designer_sections))
+    Path("Nobin_Morsalin_ATS_Resume.pdf").write_bytes(build_pdf("Nobin Morsalin — ATS Resume", build_resume_pages("Nobin Morsalin — ATS Resume", ats_sections)))
+    Path("Nobin_Morsalin_Designer_Resume.pdf").write_bytes(build_pdf("Nobin Morsalin — Designer Resume", build_resume_pages("Nobin Morsalin — Designer Resume", designer_sections)))
     print("Generated ATS and Designer resume PDFs.")
 
 
