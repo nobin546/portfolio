@@ -119,10 +119,10 @@ def main():
             "VPS Management, Linux, Docker, Git, GitHub, SEO, Admin Dashboard Development"
         ]),
         ("SECTION:Professional Experience", [
-            "Freelance Full Stack Web Developer — independent client work and product builds.",
-            "AI Assisted Software Developer — using AI-assisted workflows for faster implementation while verifying code quality and deployment readiness.",
-            "Independent Client Projects — school and college management systems, e-commerce development, landing pages, and business automation systems.",
-            "Real Client Work — live project delivery, API integration, payment setup, analytics tagging, and production deployment."
+            "2022 — 2023: Started learning modern web development, programming fundamentals, AI-assisted development, and building personal projects.",
+            "2023 — 2024: Built multiple real-world websites, landing pages, school & college management systems, business websites, and admin dashboards while continuously improving development skills.",
+            "2024 — 2025: Worked with real clients on production-ready projects including API integrations, payment gateways such as SSLCommerz, Stripe, and PayPal, Meta Pixel, Facebook Conversion API (CAPI), Events API, VPS deployment, SEO optimization, and automation systems.",
+            "2025 — Present (2026): Working as a Freelance Full Stack Web Developer & AI-Assisted Software Developer, building scalable business applications, affiliate platforms, e-commerce systems, OfferLutBox.com, ZenFashions.shop, and custom web solutions for clients."
         ]),
         ("SECTION:Latest Work", [
             "Meta Tracking + Facebook Pixel + Conversions API + Events API",
@@ -160,7 +160,7 @@ def main():
             "OfferLutBox.com — affiliate and offer management platform with analytics, smart redirects, and production deployment.",
             "ZenFashions.shop — modern e-commerce experience focused on responsive UI, product journeys, and fast performance.",
             "School & College Management Systems — admin dashboards, role-based workflows, records, and automation.",
-            "Landing Pages and Business Automation Systems — conversion-focused websites and operational tools."
+            "Landing Pages and Business Automation Systems — conversion-focused websites and operational tools built for real clients."
         ]),
         ("SECTION:Latest Work", [
             "Meta Tracking + Facebook Pixel + Conversions API + Events API",
